@@ -1,11 +1,20 @@
 #include <iostream>
 
-using namespace std ;
+#include "./Definitions/SongDefinition.cpp"
+#include "./Services/SongService.cpp"
 
-int main() {
+using namespace std;
 
+int main()
+{
 
+    cout << "Music PlayList Manager"<<endl;
+
+    SongService SongService;
+
+    Song song = SongService.createSong();
+
+    song.display();
 
 }
-
 
