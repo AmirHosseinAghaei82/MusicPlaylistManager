@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include <vector>
+
 #include <string>
 
 #include "../Definitions/SongDefinition.cpp"
@@ -8,14 +10,20 @@ using namespace std;
 
 class SongService
 {
-    
-    public:
 
-        string title, artist;
+public:
+    string title, artist;
 
-        double duration;
+    double duration;
 
-        Song createSong()
+    char check = 'y';
+
+    vector<Song> songs;
+
+    vector<Song> createSong()
+    {
+
+        while (check == 'y' || check == 'Y')
         {
 
             cout << "Enter Title :";
@@ -30,10 +38,23 @@ class SongService
 
             cin >> duration;
 
-            return Song(title, artist, duration);
+            cin.ignore();
+
+            Song song(title, artist, duration);
+
+            songs.push_back(song);
+
+            cout << "Do you want to add another song?(y/n)";
+
+            cin >> check;
+
+            cin.ignore();
 
         }
 
+            cout << songs.size() << "songs added";
 
+            return songs;
 
+    }
 };

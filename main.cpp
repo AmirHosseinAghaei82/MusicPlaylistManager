@@ -8,13 +8,17 @@ using namespace std;
 int main()
 {
 
+    vector<Song> songs;
+
     cout << "Music PlayList Manager"<<endl;
 
     SongService SongService;
 
-    Song song = SongService.createSong();
+    songs = SongService.createSong();
 
-    song.display();
+    cout << songs.size();
+
+    
 
 }
 
