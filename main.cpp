@@ -2,23 +2,20 @@
 
 #include "./Definitions/SongDefinition.cpp"
 #include "./Services/SongService.cpp"
+#include "./Services/SongNodeService.cpp"
 
 using namespace std;
 
 int main()
 {
 
-    vector<Song> songs;
-
     cout << "Music PlayList Manager"<<endl;
 
-    SongService SongService;
+    SongService songService;
 
-    songs = SongService.createSong();
+    SongNodeService songNodeService(songService.createSong());
 
-    cout << songs.size();
 
     
-
 }
 
