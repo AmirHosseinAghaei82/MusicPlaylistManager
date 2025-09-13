@@ -15,7 +15,7 @@ int main()
 
     SongNodeService songNodeService(songService.createSong());
 
+    songNodeService.createNode();
 
-    
 }
 

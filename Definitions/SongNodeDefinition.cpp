@@ -18,5 +18,4 @@ class SongNode
 
         SongNode(Song& s) : song(s), next(nullptr) {}
 
-
 };

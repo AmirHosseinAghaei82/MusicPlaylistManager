@@ -9,26 +9,32 @@
 
 #include <vector>
 
-
-
 using namespace std;
 
 class SongNodeService
 {
 
-    private:
+private:
 
-        vector<Song> songs;
+    vector<Song> songs;
 
-    public:
+public:
 
-        SongNodeService(vector<Song> s) : songs(s) {}
+    SongNodeService(const vector<Song> &s) : songs(s) {}
 
-        
+    vector<SongNode*> createNode()
+    {
 
+        vector<SongNode*> songNodes;
 
+        for (Song &song : songs)
+        {
 
+            songNodes.push_back(new SongNode(song));
 
+        }
 
+        return songNodes;
 
+    }
 };
