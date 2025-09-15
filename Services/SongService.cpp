@@ -1,3 +1,6 @@
+#ifndef SONG_SERVICE_H
+#define SONG_SERVICE_H
+
 #include <iostream>
 
 #include <vector>
@@ -52,9 +55,9 @@ public:
 
         }
 
-            cout << songs.size() << "songs added";
-
             return songs;
 
     }
 };
+
+#endif

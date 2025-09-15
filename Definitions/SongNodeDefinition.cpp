@@ -1,3 +1,5 @@
+#ifndef SONG_NODE_DEFINITION_H
+#define SONG_NODE_DEFINITION_H
 
 #include <iostream>
 
@@ -18,4 +20,10 @@ class SongNode
 
         SongNode(Song& s) : song(s), next(nullptr) {}
 
+
+
 };
+
+
+
+#endif

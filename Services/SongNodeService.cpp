@@ -1,3 +1,5 @@
+#ifndef SONG_NODE_SERVICE_H
+#define SONG_NODE_SERVICE_H
 
 #include <iostream>
 
@@ -22,7 +24,7 @@ public:
 
     SongNodeService(const vector<Song> &s) : songs(s) {}
 
-    vector<SongNode*> createNode()
+    vector<SongNode *> createNodes()
     {
 
         vector<SongNode*> songNodes;
@@ -38,3 +40,5 @@ public:
 
     }
 };
+
+#endif

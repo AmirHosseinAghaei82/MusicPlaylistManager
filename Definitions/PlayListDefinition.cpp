@@ -1,7 +1,11 @@
+#ifndef PLAY_LIST_DEFINITION_H
+#define PLAY_LIST_DEFINITION_H
 
 #include <iostream>
 
 #include <string>
+
+#include <vector>
 
 #include "../Definitions/SongNodeDefinition.cpp"
 
@@ -12,12 +16,12 @@ class PlayList
 
     private:
 
-        SongNode* head;
-
-        int size;
-
+    SongNode* head;
+    
+    int size;
+    
     public:
-
+    
         PlayList() : head(nullptr), size(0) {}
 
         SongNode* gethead()
@@ -26,20 +30,34 @@ class PlayList
             return head;
 
         }
-
-        int getSize()
-        {
-
-            return size;
-
-        }
-
         void setHead(SongNode*& h)
         {
 
             head = h;
 
         }
+
+        int getSize()
+        {
+
+             return size;
+
+        }
+
+        void displayHead()
+        {
+
+            cout << head << endl;
+
+        }
+
+        void displaySize()
+        {
+
+            cout << size << endl;
+
+        }
+
 
 
 
@@ -61,3 +79,5 @@ class PlayList
 
 
 };
+
+#endif

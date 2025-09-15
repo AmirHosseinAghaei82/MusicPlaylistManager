@@ -1,21 +1,31 @@
 #include <iostream>
 
-#include "./Definitions/SongDefinition.cpp"
 #include "./Services/SongService.cpp"
 #include "./Services/SongNodeService.cpp"
+#include "./Services/PlayListService.cpp"
 
 using namespace std;
 
 int main()
 {
-
+    
     cout << "Music PlayList Manager"<<endl;
 
     SongService songService;
-
+    
     SongNodeService songNodeService(songService.createSong());
 
-    songNodeService.createNode();
+    PlayList playList;
 
+    playList.displayHead();
+
+    PlayListService playListService(songNodeService.createNodes(), playList);
+
+    playListService.createPlayList();
+
+    
+
+    
+  
 }
 
