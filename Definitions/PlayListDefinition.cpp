@@ -18,11 +18,11 @@ class PlayList
 
     SongNode* head;
     
-    int size;
+    int playListSize;
     
     public:
     
-        PlayList() : head(nullptr), size(0) {}
+        PlayList() : head(nullptr), playListSize(0) {}
 
         SongNode* gethead()
         {
@@ -37,10 +37,17 @@ class PlayList
 
         }
 
-        int getSize()
+        int getPlayListSize()
         {
 
-             return size;
+             return playListSize;
+
+        }
+
+        void setPlayListSize(int s)
+        {
+
+            playListSize = s;
 
         }
 
@@ -54,7 +61,7 @@ class PlayList
         void displaySize()
         {
 
-            cout << size << endl;
+            cout << playListSize << endl;
 
         }
 

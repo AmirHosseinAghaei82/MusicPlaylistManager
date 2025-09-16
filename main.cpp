@@ -17,8 +17,6 @@ int main()
 
     PlayList playList;
 
-    playList.displayHead();
-
     PlayListService playListService(songNodeService.createNodes(), playList);
 
     playListService.createPlayList();

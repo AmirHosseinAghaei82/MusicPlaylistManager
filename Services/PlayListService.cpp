@@ -27,15 +27,31 @@ class PlayListService
         void createPlayList()
         {
 
-            if (playList.gethead() == nullptr) {
+                playList.setPlayListSize(songNodes.size());
 
-                cout<<"پلی لیستی  هنوز ساخته نشده"<<endl;
+                if(playList.gethead() == nullptr) {
+
+                    playList.setHead(songNodes[0]);
+
+                }
+
+                int i = 1;
+
+                while (i < playList.getPlayListSize())
+                {
+
+                    
+                    
+
+
+                }
+                
+    
 
             }
 
-            playList.setHead(songNodes[0]);
 
-            cout<<playList.gethead();
+
 
         }
 };
