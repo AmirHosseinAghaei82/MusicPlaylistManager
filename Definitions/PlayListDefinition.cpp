@@ -24,7 +24,7 @@ class PlayList
     
         PlayList() : head(nullptr), playListSize(0) {}
 
-        SongNode* gethead()
+        SongNode* getHead()
         {
 
             return head;

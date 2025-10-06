@@ -29,7 +29,7 @@ class PlayListService
 
                 playList.setPlayListSize(songNodes.size());
 
-                if(playList.gethead() == nullptr) {
+                if(playList.getHead() == nullptr) {
 
                     playList.setHead(songNodes[0]);
 
@@ -40,20 +40,35 @@ class PlayListService
                 while (i < playList.getPlayListSize())
                 {
 
-                    
-                    
+                    songNodes[i-1]->setNext(songNodes[i]);
 
+                    i++;
 
                 }
-                
-    
+
+                int j = 0;
+
+                int number = 1;
+
+                SongNode* node = playList.getHead();
+
+                while(j < playList.getPlayListSize())
+                {
+
+                    cout << number << " : " << node->getSongTitle() << " by " << node->getSongArtist() << endl;
+                    
+                    j++;
+                    
+                    number++;
+
+                    node = node->getNext();
+
+                } 
+
 
             }
 
-
-
-
         }
-};
+;
 
 #endif
