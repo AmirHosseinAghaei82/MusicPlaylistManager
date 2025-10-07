@@ -20,6 +20,8 @@ class Song
 
     public:
 
+        Song() : title(), artist(), duration() {}
+
         Song(string& title, string& artist, double& duration)
         {
 
@@ -45,7 +47,7 @@ class Song
 
         }
 
-        double getDoration()
+        double getDuration()
         {
 
             return duration;

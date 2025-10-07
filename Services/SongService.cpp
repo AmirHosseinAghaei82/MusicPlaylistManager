@@ -14,50 +14,59 @@ using namespace std;
 class SongService
 {
 
-public:
-    string title, artist;
+    private:
 
-    double duration;
+        Song song;
+    
+        vector<Song> songs;
 
-    char check = 'y';
+    public:
 
-    vector<Song> songs;
 
-    vector<Song> createSong()
-    {
+        SongService() : songs(), song() {}
 
-        while (check == 'y' || check == 'Y')
+        vector<Song> createSong()
         {
+ 
+            string title, artist;
 
-            cout << "Enter Title :";
+            double duration;
 
-            getline(cin >> ws, title);
+            char check = 'y';
 
-            cout << "Enter Artist :";
+            while (check == 'y' || check == 'Y')
+            {
 
-            getline(cin >> ws, artist);
+                cout << "Enter Title :";
 
-            cout << "Enter Duration :";
+                getline(cin >> ws, title);
 
-            cin >> duration;
+                cout << "Enter Artist :";
 
-            cin.ignore();
+                getline(cin >> ws, artist);
 
-            Song song(title, artist, duration);
+                cout << "Enter Duration :";
 
-            songs.push_back(song);
+                cin >> duration;
 
-            cout << "Do you want to add another song?(y/n)";
+                cin.ignore();
 
-            cin >> check;
+                Song song(title, artist, duration);
 
-            cin.ignore();
+                songs.push_back(song);
 
-        }
+                cout << "Do you want to add another song?(y/n)";
+
+                cin >> check;
+
+                cin.ignore();
+
+            }
 
             return songs;
 
-    }
+        }
+
 };
 
 #endif

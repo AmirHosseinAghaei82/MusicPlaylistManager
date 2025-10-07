@@ -50,10 +50,10 @@ class SongNode
 
         }
 
-        double getSongDoration()
+        double getSongDuration()
         {
 
-            return song.getDoration();
+            return song.getDuration();
 
         }
 };
